@@ -97,6 +97,7 @@ import {mapGetters,mapState} from 'vuex'
       SearchSelector
     },
     beforeMount(){
+      //整合一下首页传过来的数据
       Object.assign(this.searchParams,this.$route.query,this.$route.params)
     },
     mounted(){
@@ -115,6 +116,7 @@ import {mapGetters,mapState} from 'vuex'
       }
     },
     methods:{
+      //请求数据
       getDate(){
       this.$store.dispatch('getSearchList',this.searchParams)
       },
